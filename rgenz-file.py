@@ -42,7 +42,7 @@ def start(arg):
 
 def take_screens():
     print('Generating screenshots..')
-    # os.system(f'''ffmpeg -nostats -loglevel 0 -i "{file_path}" -vf "select='not(mod(n,{ss_gap}))',setpts='N/(30*TB)'" -f image2 -frames:v {ss_num} "{dir_only}\\RGENZ_screens_%03d_{file_name}{pic_ext}"''')  # image2
+    os.system(f'''ffmpeg -nostats -loglevel 0 -i "{file_path}" -vf "select='not(mod(n,{ss_gap}))',setpts='N/(30*TB)'" -f image2 -frames:v {ss_num} "{dir_only}\\RGENZ_screens_%03d_{file_name}{pic_ext}"''')
 
 
 def create_torrent():
